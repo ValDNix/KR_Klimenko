@@ -1,0 +1,15 @@
+aranara(arama, m, 21000, green, dr).
+aranara(arakavi, f, 19000, red, undr).
+aranara(arayasa, m, 23500, blue, dr).
+aranara(aradasa, m, 16900, green, undr).
+aranara(arapas, f, 23000, yellow, dr).
+age(X) :- aranara(X, _, Z, _, _), 20000>=Z.  %Аранары, у которых возраст больше 20000 лет
+dressed(X) :- aranara(X, _, _, _, D), dr==D. %Аранары, которые ходят без доп. одежды(например бабочки, пиджака)
+colour(X) :- aranara(X, _, C, _, _), green==C. %Цвет Аранар
+
+?- age(A), aranara(A, B, C, D, E)
+
+?- colour(A), aranara(A, B, C, D, E)
+
+?- dressed(A), aranara(A, B, C, D, E)
+
